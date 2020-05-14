@@ -1,0 +1,31 @@
+﻿<Window x:Class="SAW_TRAY_VISION_V01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SAW_TRAY_VISION_V01"
+        mc:Ignorable="d"
+        Icon="v.png"
+        WindowStartupLocation="CenterScreen"
+        Title="SAW Tray Vision V1.0" Height="1000" Width="1920" Closed="Window_Closed" Closing="Window_Closing">
+    <Viewbox>
+    <DockPanel LastChildFill="True">
+        <!-- Control Dockpanel-->
+        <DockPanel DockPanel.Dock="Top">
+            <Button DockPanel.Dock="Right"  Margin="2" FontSize="15" VerticalAlignment="Top" x:Name="Btn_About" Content="About" Click="Btn_About_Click" ></Button>
+            <StackPanel DockPanel.Dock="Left" Margin="0" Orientation="Horizontal">
+                <Button Grid.Row="0" Grid.Column="0" Margin="2" FontSize="15" VerticalAlignment="Top" x:Name="BtnHome" Content="HOME" Click="BtHome_Click" ></Button>
+                <!-- Button Grid.Row="1" Grid.Column="0" Margin="0,0,0,5" FontSize="26" VerticalAlignment="Top" x:Name="BtnIO" Content="IO" Click="BtnIO_Click"></-->
+                <Button Grid.Row="2" Grid.Column="0" Margin="2" FontSize="15" VerticalAlignment="Top" x:Name="BtnRecipe" Content="RECIPE" Click="BtnRecipe_Click"></Button>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Frame_WorkPage Dockpanel-->
+        <Grid DockPanel.Dock="Bottom" Margin="0,0,0,0">
+            <ScrollViewer HorizontalScrollBarVisibility="Visible" >
+                <Frame Margin="0,0,0,0" DockPanel.Dock="Top" x:Name="Frame_WorkPage" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF5B2626" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" MinWidth="1895" Height="928" Width="1894" MinHeight="928"/>
+            </ScrollViewer>
+        </Grid>
+    </DockPanel>
+    </Viewbox>
+</Window>
